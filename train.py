@@ -112,7 +112,6 @@ def run_training(continue_run):
  #       logging.info(images_train.shape[0])
 
 
-    # Tell TensorFlow that the model will be built into the default Graph.
 
     with tf.Graph().as_default():
 
@@ -132,16 +131,6 @@ def run_training(continue_run):
         # Build a Graph that computes predictions from the inference model.
         if (config.experiment_name == 'unet2D_valid' or config.experiment_name == 'unet2D_same' or config.experiment_name == 'unet2D_same_mod' or config.experiment_name == 'unet2D_light' or config.experiment_name == 'Dunet2D_same_mod' or config.experiment_name == 'Dunet2D_same_mod2' or config.experiment_name == 'Dunet2D_same_mod3'):
             logits = model.inference(images_pl, config, training=training_pl)
-        elif config.experiment_name == 'ENet':
-            with slim.arg_scope(model_structure.ENet_arg_scope(weight_decay=2e-4)):
-                logits = model_structure.ENet(images_pl,
-                                              num_classes=config.nlabels,
-                                              batch_size=config.batch_size,
-                                              is_training=True,
-                                              reuse=None,
-                                              num_initial_blocks=1,
-                                              stage_two_repeat=2,
-                                              skip_connections=config.skip_connections)
         else:
             logging.warning('invalid experiment_name!')    
         
@@ -481,8 +470,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # parser = argparse.ArgumentParser(
-    #     description="Train a neural network.")
-    # parser.add_argument("CONFIG_PATH", type=str, help="Path to config file (assuming you are in the working directory)")
-    # args = parser.parse_args() 
+
     main()
