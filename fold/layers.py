@@ -2,7 +2,7 @@ import tensorflow as tf
 import numpy as np
 import configuration as config
 
-from tfwrapper import utils
+from fold import utils
 
 from tensorflow.contrib.layers import variance_scaling_initializer, xavier_initializer
 
