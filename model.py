@@ -1,5 +1,5 @@
 import tensorflow as tf
-from tfwrapper import losses
+from fold import losses
 import configuration as config
 slim = tf.contrib.slim
 import model_structure
