@@ -65,6 +65,19 @@ To evaluate the model run
 
 ## Results
 
+Example of segmentation results of basal slices 
+
+![github-small](https://raw.githubusercontent.com/Monzino/Ventricle_segmentation/main/Picture1.png)
+
+Example of segmentation results of mid-ventricular level 
+
+![github-small](https://raw.githubusercontent.com/Monzino/Ventricle_segmentation/main/Picture2.png)
+
+Example of segmentation results of apical slices 
+
+![github-small](https://raw.githubusercontent.com/Monzino/Ventricle_segmentation/main/Picture3.png)
+
+
 
 
    
