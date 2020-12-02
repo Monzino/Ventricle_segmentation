@@ -11,7 +11,6 @@ experiment_name = 'unet2D_same_mod'
 #experiment_name = 'Dunet2D_same_mod'
 #experiment_name = 'Dunet2D_same_mod2'
 #experiment_name = 'Dunet2D_same_mod3'
-#experiment_name = 'ENet'
 
 # Model settings Unet2D
 weight_init = 'he_normal'    # xavier_uniform/ xavier_normal/ he_normal /he_uniform /caffe_uniform/ simple/ bilinear
@@ -32,17 +31,16 @@ nlabels = 4
 split_test_train = True   #divide patients in train and test. If true define split
 split = 5                 #  2: 50% train and 50% validation,    5: 80% training, 20% validation
 train_on_all_data = False 
-gt_exists = True    #True if it exists the ground_trth images, otherwise False.
+gt_exists = True    #True if it exists the ground_truth images, otherwise False.
 z_dim = 8
 
 # Training settings
 batch_size = 4      #4 
-learning_rate = 0.01   #unet: 0.01    enet: 0.0005
-exponential_decay = False     #True Enet
+learning_rate = 0.01   #unet: 0.01   
 optimizer_handle = tf.compat.v1.train.AdamOptimizer     #(beta1 = 0.9, beta2 = 0.999, epsilon=1e-08)
 schedule_lr = False    #decrease 10 times the LR when loss gradient lower than threshold
 warmup_training = True
-weight_decay = 0  # enet:2e-4    #unet: 0.00000
+weight_decay = 0  #unet: 0.00000
 momentum = None
 # loss can be 'weighted_crossentropy'/'crossentropy'/'dice'/'dice_onlyfg'/'crossentropy_and_dice (alfa,beta)'
 loss_type = 'weighted_crossentropy'
@@ -81,11 +79,11 @@ offset2 = (10,30)           #number of pixels to crop away on each side of the i
 prob = 1                    #Probability [0.0/1.0] (0 no augmentation, 1 always)
 
 # Paths settings (need to mount MyDrive before)
-data_root = '/content/drive/My Drive/Pazienti/train2.1'      
-test_data_root = '/content/drive/My Drive/Pazieni/test2.1'
+data_root = '/content/drive/My Drive/Pazienti/train'      
+test_data_root = '/content/drive/My Drive/Pazieni/test'
 preprocessing_folder = '/content/drive/My Drive/preproc_data'     
 project_root = '/content/drive/My Drive'                       
-log_root = os.path.join(project_root, 'acdc_logdir')
+log_root = os.path.join(project_root, 'logdir')
 weights_root = os.path.join(log_root, experiment_name)
 
 # Pre-process settings
