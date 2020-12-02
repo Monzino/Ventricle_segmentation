@@ -78,7 +78,9 @@ Example of segmentation results of apical slices
 ![github-small](https://raw.githubusercontent.com/Monzino/Ventricle_segmentation/main/Picture3.png)
 
 
+## Author
 
+Marco Penso [email](Marco.Penso@cardiologicomonzino.it)
 
    
 
