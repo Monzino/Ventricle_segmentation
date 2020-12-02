@@ -31,9 +31,14 @@
 
    You need to make two folders
 
-    Images Folder - For all the training images
-    Annotations Folder - For the corresponding ground truth segmentation images
- 
+   - Images Folder (img)- For all the training images
+   - Annotations Folder (mask) - For the corresponding ground truth segmentation images
+  
+  Inside the Images and Annotation folder, you need to create a folder for each subject, with the corresponding images.
+  
+  The filenames of the annotation images should be same as the filenames of the images.
+
+  The size of the annotation image for the corresponding image should be same.
 
 ## Configuration
 
@@ -58,8 +63,9 @@ To evaluate the model run
 
     evaluate_patients.py
 
+## Results
 
-    
+
 
    
 
