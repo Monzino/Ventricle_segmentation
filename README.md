@@ -1,4 +1,4 @@
-# Ventricle_segmentation
+# Ventricle segmentation using Dense Fully Convolutional Neural Network
 
 ## Requirements
 
