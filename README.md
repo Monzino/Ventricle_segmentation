@@ -1,5 +1,7 @@
 # Ventricle segmentation using Dense Fully Convolutional Neural Network
 
+[![DOI](https://zenodo.org/badge/304339610.svg)](https://zenodo.org/badge/latestdoi/304339610)
+
 ## Requirements
 
     Python 3.5 (tested with Python 3.5.3)
